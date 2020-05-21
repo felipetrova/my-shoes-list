@@ -6,6 +6,8 @@ import { ApplicationState } from '../../store';
 import { Shoe } from '../../store/ducks/shoes/types';
 import * as ShoesActions from '../../store/ducks/shoes/actions'
 
+import ShoeItem from '../ShoeItem';
+
 interface StateProps {
   shoes: Shoe[]
 }
@@ -28,10 +30,11 @@ class ShoesList extends Component<Props> {
 
     return(
       <ul>
-        {shoes.map((shoe, index) => (
-          <li key={index + 1}>
-            {shoe.name}
-          </li>
+        {shoes.map(shoe => (
+          <ShoeItem
+            key={shoe.id}
+            shoe={shoe}
+          />
         ))}
       </ul>
     );
