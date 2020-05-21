@@ -28,7 +28,11 @@ class ShoesList extends Component<Props> {
 
     return(
       <ul>
-        {shoes.map(shoe => shoe.name)}
+        {shoes.map((shoe, index) => (
+          <li key={index + 1}>
+            {shoe.name}
+          </li>
+        ))}
       </ul>
     );
   }

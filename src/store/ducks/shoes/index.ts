@@ -2,16 +2,7 @@ import { Reducer } from 'redux';
 import { ShoesState, ShoesTypes } from './types';
 
 const INITIAL_STATE: ShoesState = {
-  data: [
-    {
-      id: 1,
-      name: 'Nike Jordan Proto-React Z'
-    },
-    {
-      id: 2,
-      name: 'Nike Air Max 720'
-    },
-  ],
+  data: [],
   error: false,
   loading: false,
 };
